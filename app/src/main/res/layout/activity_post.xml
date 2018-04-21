@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PostActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#2E9AFE">
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:stretchColumns="*">
+                <TableRow>
+                    <ImageView
+                        android:layout_column="0"
+                        android:id="@+id/btnBack"
+                        android:text="Back"
+                        android:src="@drawable/back"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                    <TextView
+                        android:layout_column="1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Tạo bài viết"
+                        android:textSize="20dp"
+                        android:textColor="@color/bpWhite"/>
+                    <ImageView
+                        android:id="@+id/btnImg"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_column="5"
+                        android:src="@drawable/camera"
+                        android:text="Chọn ảnh" />
+
+                    <ImageView
+                        android:layout_column="6"
+                        android:id="@+id/btnGui"
+                        android:src="@drawable/send1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Đăng bài"/>
+                </TableRow>
+
+            </TableLayout>
+
+        </Toolbar>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/imgAvatar"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_contact"
+                android:background="@drawable/bg_score"
+                app:civ_border_color="@color/colorBlack"
+                app:civ_border_width="2dp" />
+
+
+           <LinearLayout
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:orientation="vertical">
+               <TextView
+                   android:id="@+id/txtName"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:textSize="24dp"
+                   android:paddingLeft="20dp"
+                   android:textStyle="bold"
+                   android:text="Name"
+                   />
+               <TextView
+                   android:id="@+id/txtLocationPost"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:textSize="15dp"
+                   android:paddingLeft="20dp"
+                   />
+           </LinearLayout>
+        </LinearLayout>
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/edtNoiDung"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:hint="Bạn đang nghĩ gì?"
+                android:imeOptions="actionUnspecified"
+                android:inputType="text|textMultiLine"
+                android:maxLines="10"
+                android:singleLine="false"
+                android:gravity="top"/>
+
+        </android.support.design.widget.TextInputLayout>
+
+        <ImageView
+            android:id="@+id/imgPost"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            />
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>
